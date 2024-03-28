@@ -1,0 +1,62 @@
+//package Day1;
+
+//public class Day1 {
+	//public static int sum(int n, int m){
+		//return n+m;
+	//}
+   //public static void main(String args[]) {
+	   
+	//   var V = 'c';
+	   
+	   //int a = 5;
+	   //int b = 3;
+	   
+	   //int s;
+	   //s = sum(a,b);
+	   
+	  // System.out.println(s)
+	   //System.out.print(S);
+	  
+	   //c//har c = 'c';
+	   //int d = 'd';
+	   
+	   //System.out.println("¹®ÀÚ"+c+d);
+		
+	   //1. ¸¶ÀÏ - Å³·Î¹ÌÅÍ º¯È¯, Å³·Î¹ÌÅÍ - ¸¶ÀÏ º¯È­ (1¸¶ÀÏ = 1.60934km)
+	   //1_1 ÀÔ·Â ; ¸¶ÀÏ = 30, 1_2 ÀÔ·Â : Å³·Î¹ÌÅÍ = 60
+	   
+	   //2. ¼·¾¾ - È­¾¾ º¯È¯, È­¾¾ - ¼·¾¾ º¯È¯ [(¼·¾¾ * 1.8)+32]
+	   //2_1 ¼·¾¾ : 30 / È­¾¾ : 30
+	   
+	   
+	  package Day1;
+	  public class Day1 {
+		  public static double MtoK(int mile){ //Mie=>kilo
+			  return mile*1.6;
+		  }
+		  public static void Miletokilo(int Mile) {
+			  double km = Mile * 1.6;
+			  System.out.println("M->k: "+km);
+		  }
+		  public static double KtoM(int Kilo){ 
+			  return Kilo /1.6;
+	  }
+		  public static double CtoF(int C){
+			  return (C*1.8) + 32;
+		  }
+		  public static double FtoC(int F){
+			  return (F-32)/1.8;
+		  }
+		  public static void main(String args[]){
+			  int Mile = 30;
+			  int Kilo = 60;
+			  int C = 30;
+			  
+			  System.out.println("M->K:"+MtoK(Mile));
+			  System.out.println("K->m:"+KtoM(Kilo));
+			  System.out.println("C->F:"+FtoC(C));
+			  System.out.println("F->c:"+CtoF(C));
+		  }
+	  }
+	  
+	   
