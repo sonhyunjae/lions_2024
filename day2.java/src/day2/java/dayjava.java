@@ -1,0 +1,65 @@
+package day2.java;
+
+import java.util.Scanner;
+
+public class dayjava {
+//1.이름 , 응시번호6자리, 시험 성적 순서대로 입력
+//->이르 : string
+//->//응시번호(id) : string으로 받은 뒤, integer. value of(ID.charAt(Id.length()-1));
+  //->문자열로 이루어진 응시번호를 입력받은 ㅜ디, 해당 값의 제일 마지막 string을 가져와 int형태로 변환
+//->시험 서정//
+   public static void Odd_Subject(String Name, String ID){
+	   Scanner scanner = new Scanner(System.in);
+	   int CS;//컴퓨터구조(정수)
+	   int DB;//DB(정수)
+	   int SE;//소프트웨어 공학 (숫자, 정수형)
+	   
+	   int Total = 0;
+	   
+	   System.out.print("가형 응시자입니다. 컴퓨터 구조 성적을 입력하세요: ");//출력
+	   CS = scanner.nextInt();//입력받고
+	   Total += CS;//더해주고
+	   
+	   System.out.print("데이터베이스 성적을 입력하세요 : ");
+	   DB = scanner.nextInt();
+	   Total +=DB;
+	   
+	   System.out.print("소프트웨어공학 성적을 입력하세요 : ");
+	   SE = scanner.nextInt();
+	   Total += SE;
+	   
+	   int Avg = Total/3;
+	   
+	   //점수 출력
+	   System.out.print("컴퓨터 구조 성적 : " + CS + "점입니다." + "데이터 베이스 성적은:" + DB + "점입니다." + "소프트웨어공학 성적:" + SE + "점입니다.");
+	   
+	   //평균 점수 : 80 이하 =실격
+	   if(Avg <= 80){
+		   System.out.println("평균 점수는"+Avg+"점으로 실격입니다.");
+	   }
+	   else{
+		   System.out.println("평균 점수는"+Avg+"점으로 합격입니다!");
+	   }
+	   
+   }
+	public static void main(String args[]){
+	Scanner scanner = new Scanner(System.in);
+	
+	String Name;//이름
+	String ID;//응시번호->010101 이런 형태의 숫자도 받기 위해서 String으로 선언 (문자열)
+	
+	
+	System.out.println("이름,응시번호,성적을 차례로 입력하세요:");//출력문(행바꿈,Enter)
+    System.out.print("이름 :");
+    
+    Name = scanner.next();
+    System.out.print("응시번호: ");
+    ID = scanner.next();//응시번호입력
+    
+    int ID_num = Integer.valueOf(ID.charAt(ID.length()-1));
+    //Interger.valueof(
+    if(ID_num%2 !=0){
+    	Odd_Subject(Name, ID);
+        }
+     }
+}

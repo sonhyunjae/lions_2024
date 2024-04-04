@@ -1,0 +1,15 @@
+package day2.java;
+
+public class dayjava {
+//1.이름 , 응시번호6자리, 시험 성적 순서대로 입력
+//->이르 : string
+//->//응시번호(id) : string으로 받은 뒤, integer. value of(ID.charAt(Id.length()-1));
+  //->문자열로 이루어진 응시번호를 입력받은 ㅜ디, 해당 값의 제일 마지막 string을 가져와 int형태로 변환
+//->시험 서정//
+public static void main(String args[]){
+	int score;
+	score=100;
+
+System.out.println(score+"점은 오늘 내 시험점수다");
+}
+}
